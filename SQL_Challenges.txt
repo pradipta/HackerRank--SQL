@@ -1,0 +1,28 @@
+Revising the Select Query I:
+select * from CITY where COUNTRYCODE='USA'and POPULATION>100000;
+
+Revising the Select Query II:
+select NAME from CITY where COUNTRYCODE = 'USA' and POPULATION>120000;
+
+Select All;
+select * from CITY;
+
+Select By ID:
+select * from CITY where ID=1661;
+
+Japanese Cities' Attributes:
+select * from CITY where COUNTRYCODE='JPN';
+
+Japanese Cities' Names:
+select NAME from CITY where COUNTRYCODE='JPN';
+
+Weather Observation Station 1:
+select CITY, STATE from STATION;
+
+Weather Observation Station 3:
+select distinct CITY from STATION where mod(ID,2)=0;
+
+Weather Observation Station 4:
+select ((select count(*) from STATION)-(select count(*) from (select distinct CITY from STATION))) from dual;
+
+
